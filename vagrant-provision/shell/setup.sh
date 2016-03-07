@@ -8,6 +8,7 @@ echo 'LANGUAGE="en_US.UTF-8"' >> /etc/default/locale
 
 # POSTGRESQL RELATED
 apt-get -qqy install postgresql pgadmin3 postgresql-contrib python-psycopg2
+su postgres -c 'createuser -dRS vagrant'
 
 # MONGODB RELATED
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
